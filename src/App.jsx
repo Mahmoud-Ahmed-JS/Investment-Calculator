@@ -25,7 +25,9 @@ function App() {
       <Header />
       <UserInput userInputState={userInput} onChangeValue={handleChange} />
       {!inputIsValid && (
-        <p>Please enter a duration for a Year Greater than Zero</p>
+        <p className='center'>
+          Please enter a duration for a Year Greater than Zero
+        </p>
       )}
       {inputIsValid && <Results input={userInput} />}
     </>
