@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const UserInput = ({ userInputState, onChange }) => {
+const UserInput = ({ userInputState, onChangeValue }) => {
   return (
     <section id='user-input'>
       <div className='input-group'>
@@ -10,7 +10,9 @@ const UserInput = ({ userInputState, onChange }) => {
             type='number'
             required
             value={userInputState.intitialInvestment}
-            onChange={(e) => onChange('initialInvestment', e.target.value)}
+            onChange={(e) =>
+              onChangeValue('intitialInvestment', e.target.value)
+            }
           />
         </p>
         <p>
@@ -19,7 +21,7 @@ const UserInput = ({ userInputState, onChange }) => {
             type='number'
             required
             value={userInputState.annualInvestment}
-            onChange={(e) => onChange('annualInvestment', e.target.value)}
+            onChange={(e) => onChangeValue('annualInvestment', e.target.value)}
           />
         </p>
       </div>
@@ -30,7 +32,7 @@ const UserInput = ({ userInputState, onChange }) => {
             type='number'
             required
             value={userInputState.expectedReturn}
-            onChange={(e) => onChange('expectedReturn', e.target.value)}
+            onChange={(e) => onChangeValue('expectedReturn', e.target.value)}
           />
         </p>
         <p>
@@ -39,7 +41,7 @@ const UserInput = ({ userInputState, onChange }) => {
             type='number'
             required
             value={userInputState.duration}
-            onChange={(e) => onChange('duration', e.target.value)}
+            onChange={(e) => onChangeValue('duration', e.target.value)}
           />
         </p>
       </div>

@@ -15,14 +15,14 @@ function App() {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   }
   return (
     <>
       <Header />
-      <UserInput userInputState={userInput} onChange={handleChange} />
+      <UserInput userInputState={userInput} onChangeValue={handleChange} />
       <Results input={userInput} />
     </>
   );
